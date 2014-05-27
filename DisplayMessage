@@ -1,0 +1,43 @@
+
+import javax.swing.*;
+
+public class DisplayLabel extends JApplet {
+//public class DisplayLabel extends JFrame {
+  public DisplayLabel() {
+    add(new JLabel("Great!", JLabel.CENTER));
+  }
+
+  public void init(){
+    System.out.println("init()");
+  }
+
+  public void start(){
+    System.out.println("start()");
+  }
+
+  public void stop(){
+    System.out.println("stop()");
+  }
+
+  public void destroy(){
+    System.out.println("destroy()");
+  } 
+  
+  public static void main(String[] args) {
+   
+    
+    JFrame frame = new JFrame("Applet is in the frame");
+    DisplayLabel applet = new DisplayLabel();
+    frame.add(applet);
+
+   // JFrame frame = new DisplayLabel();
+    frame.setTitle("DisplayLabel");
+    frame.setSize(300, 100);
+    frame.setLocationRelativeTo(null); // Center the frame   
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+   
+  }
+}
+
+
